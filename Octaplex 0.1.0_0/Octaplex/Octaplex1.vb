@@ -51,7 +51,7 @@
                 Me.Width = 1792
             Case "1920:1080"
                 Me.Height = 1080
-                Me.Width = 1920 'This is 1920
+                Me.Width = 1920
         End Select
         Return 0
     End Function
