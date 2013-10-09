@@ -22,7 +22,22 @@ Partial Class deckBuilder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CardDataSet = New Octaplex.cardDataSet()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CardDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataSource = Me.CardDataSet
+        Me.BindingSource1.Position = 0
+        '
+        'CardDataSet
+        '
+        Me.CardDataSet.DataSetName = "cardDataSet"
+        Me.CardDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'deckBuilder
         '
@@ -31,7 +46,11 @@ Partial Class deckBuilder
         Me.ClientSize = New System.Drawing.Size(1184, 868)
         Me.Name = "deckBuilder"
         Me.Text = "deckBuilder"
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CardDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents CardDataSet As Octaplex.cardDataSet
 End Class

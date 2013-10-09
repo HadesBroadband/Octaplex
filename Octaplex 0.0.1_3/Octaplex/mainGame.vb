@@ -1,6 +1,6 @@
 ﻿Public Class mainGame
-    Dim midXForm As Integer = (Me.Height / 2) + 200
-    Dim midYForm As Integer = (Me.Width / 2) + 200
+    Dim midX As Integer = (Me.Height / 2) + 200
+    Dim midY As Integer = (Me.Width / 2) + 200
 
     Private Sub mainGame_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.BackgroundImage = My.Resources.playboard
@@ -9,11 +9,11 @@
 
     Private Sub pause_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Escape) Then
-            pause()
+            pauseGame(midX, midY)
         End If
     End Sub
 
-    Public Function pause() As Integer
+    Public Function pauseGame(midXForm, midYForm) As Integer
         Dim pauseMainMenu As New Button
         AddHandler pauseMainMenu.Click, AddressOf pauseMainMenu_Click
         Me.Controls.Add(pauseMainMenu)
@@ -47,4 +47,6 @@
         Octaplex1.Close()
         Me.Close()
     End Sub
+
+    c
 End Class

@@ -63,7 +63,7 @@ Partial Class Octaplex1
         'quitButton
         '
         Me.quitButton.Font = New System.Drawing.Font("Eras Medium ITC", 60.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.quitButton.Location = New System.Drawing.Point(12, 747)
+        Me.quitButton.Location = New System.Drawing.Point(871, 278)
         Me.quitButton.Name = "quitButton"
         Me.quitButton.Size = New System.Drawing.Size(401, 103)
         Me.quitButton.TabIndex = 3
@@ -87,7 +87,7 @@ Partial Class Octaplex1
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BackgroundImage = Global.Octaplex.My.Resources.Resources.BackgroundMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1284, 953)
+        Me.ClientSize = New System.Drawing.Size(1284, 706)
         Me.Controls.Add(Me.deckButton)
         Me.Controls.Add(Me.quitButton)
         Me.Controls.Add(Me.optionButton)

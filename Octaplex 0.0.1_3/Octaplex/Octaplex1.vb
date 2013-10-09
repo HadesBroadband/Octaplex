@@ -10,11 +10,15 @@
         Dim optionW As Integer = optionButton.Width
         Dim font As New System.Drawing.Font("Eras Medium ITC", 20)
 
+        Me.playButton.Left = 12
+        Me.optionButton.Left = 12
+        Me.deckButton.Left = 12
+
         resOpt.Left = optionY + optionW + 20
         resOpt.Top = optionX + 1
         resOpt.Font = font
         resOpt.Height = 166
-        resOpt.Width = 135
+        resOpt.Width = 150
         resOpt.Items.Add("906:1200")
         resOpt.Items.Add("1408:792")
         resOpt.Items.Add("1536:864")
@@ -37,21 +41,27 @@
             Case "906:1200"
                 Me.Height = 906
                 Me.Width = 1200
+                Me.quitButton.Left = 1200 - 27 - quitButton.Width
             Case "1408:792"
                 Me.Height = 792
                 Me.Width = 1408
+                Me.quitButton.Left = 1408 - 27 - quitButton.Width
             Case "1536:864"
                 Me.Height = 864
                 Me.Width = 1536
+                Me.quitButton.Left = 1536 - 27 - quitButton.Width
             Case "1665:936"
                 Me.Height = 936
                 Me.Width = 1665
+                Me.quitButton.Left = 1665 - 27 - quitButton.Width
             Case "1792:1008"
                 Me.Height = 1008
                 Me.Width = 1792
+                Me.quitButton.Left = 1792 - 27 - quitButton.Width
             Case "1920:1080"
                 Me.Height = 1080
                 Me.Width = 1920
+                Me.quitButton.Left = 1920 - 27 - quitButton.Width
         End Select
         Return 0
     End Function

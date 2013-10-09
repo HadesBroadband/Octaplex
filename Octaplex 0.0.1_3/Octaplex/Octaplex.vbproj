@@ -106,6 +106,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Resources\cardDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cardDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="deckBuilder.resx">
@@ -125,6 +130,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -143,6 +149,17 @@
   <ItemGroup>
     <None Include="Resources\Card Database.csv" />
     <None Include="Resources\Card Database.xlsx" />
+    <None Include="Resources\cardDataSet.xsc">
+      <DependentUpon>cardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\cardDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cardDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\cardDataSet.xss">
+      <DependentUpon>cardDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Title.png" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cardDatabase.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Case.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
