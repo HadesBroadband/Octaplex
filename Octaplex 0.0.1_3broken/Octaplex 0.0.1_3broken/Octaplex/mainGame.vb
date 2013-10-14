@@ -47,6 +47,4 @@
         Octaplex1.Close()
         Me.Close()
     End Sub
-
-    c
 End Class

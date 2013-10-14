@@ -72,11 +72,17 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cardGame.vb" />
     <Compile Include="deckBuilder.Designer.vb">
       <DependentUpon>deckBuilder.vb</DependentUpon>
     </Compile>
     <Compile Include="deckBuilder.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Octaplex1.vb">
       <SubType>Form</SubType>
@@ -96,20 +102,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Resources\cardDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cardDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -124,9 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -147,19 +143,8 @@
     <None Include="Resources\BackgroundMain.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Card Database.csv" />
     <None Include="Resources\Card Database.xlsx" />
-    <None Include="Resources\cardDataSet.xsc">
-      <DependentUpon>cardDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Resources\cardDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cardDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\cardDataSet.xss">
-      <DependentUpon>cardDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="Resources\CardCSV.csv" />
     <None Include="Resources\Title.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,14 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\playboard.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cardDatabase.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Case.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

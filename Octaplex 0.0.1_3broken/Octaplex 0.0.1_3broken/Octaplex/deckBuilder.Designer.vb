@@ -22,35 +22,29 @@ Partial Class deckBuilder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CardDataSet = New Octaplex.cardDataSet()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CardDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.buildDeck = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'BindingSource1
+        'buildDeck
         '
-        Me.BindingSource1.DataSource = Me.CardDataSet
-        Me.BindingSource1.Position = 0
-        '
-        'CardDataSet
-        '
-        Me.CardDataSet.DataSetName = "cardDataSet"
-        Me.CardDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.buildDeck.Font = New System.Drawing.Font("Eras Medium ITC", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buildDeck.Location = New System.Drawing.Point(12, 12)
+        Me.buildDeck.Name = "buildDeck"
+        Me.buildDeck.Size = New System.Drawing.Size(401, 103)
+        Me.buildDeck.TabIndex = 2
+        Me.buildDeck.Text = "BUILD NEW DECK"
+        Me.buildDeck.UseVisualStyleBackColor = True
         '
         'deckBuilder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 868)
+        Me.Controls.Add(Me.buildDeck)
         Me.Name = "deckBuilder"
         Me.Text = "deckBuilder"
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CardDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents CardDataSet As Octaplex.cardDataSet
+    Friend WithEvents buildDeck As System.Windows.Forms.Button
 End Class

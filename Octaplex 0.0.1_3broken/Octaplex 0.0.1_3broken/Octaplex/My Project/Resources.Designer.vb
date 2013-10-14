@@ -73,20 +73,10 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property buttonPlay() As System.Drawing.Bitmap
+        Friend ReadOnly Property BackgroundMain1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("buttonPlay", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("BackgroundMain1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property Card_Database() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Card_Database", resourceCulture)
-                Return CType(obj,Byte())
             End Get
         End Property
         
@@ -104,29 +94,9 @@ Namespace My.Resources
         '''11,Sketch,Familiar Call,0,0,3,0,Draw Oct,0,p
         '''12,Sketch, [rest of string was truncated]&quot;;.
         '''</summary>
-        Friend ReadOnly Property Card_Database1() As String
+        Friend ReadOnly Property CardCSV() As String
             Get
-                Return ResourceManager.GetString("Card_Database1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property cardDataSet() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("cardDataSet", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property clickedPlay() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("clickedPlay", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
+                Return ResourceManager.GetString("CardCSV", resourceCulture)
             End Get
         End Property
         

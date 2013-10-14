@@ -3,7 +3,7 @@
     Dim opWindows As Integer = 0
     Dim mainMenu As Boolean = True
 
-    Private Sub optionButton_Click(sender As System.Object, e As System.EventArgs) Handles optionButton.Click
+    Public Sub optionButton_Click(sender As System.Object, e As System.EventArgs) Handles optionButton.Click
         Dim resOpt As New ListBox
         Dim optionX As Integer = optionButton.Top
         Dim optionY As Integer = optionButton.Left
@@ -28,7 +28,31 @@
 
         AddHandler resOpt.DoubleClick, Function() resolutionsList(resOpt)
         opWindows = 1
+
+        Dim height1 As Integer = resOpt.Height + resOpt.Top
+
+        Dim bLessOpt As New Button
+        bLessOpt.Left = resOpt.Left
+        bLessOpt.Top = height1
+        bLessOpt.Height = 50
+        bLessOpt.Width = 150
+        bLessOpt.Text = "Borderless Window"
+        bLessOpt.BackColor = Color.Aqua
+
+        Dim wBarOpt As New Button
+        wBarOpt.Left = resOpt.Left
+        wBarOpt.Top = height1
+        wBarOpt.Height = 50
+        wBarOpt.Width = 150
+        wBarOpt.Text = "Windowed"
+        wBarOpt.BackColor = Color.Aqua
+
+        AddHandler bLessOpt.Click, Function() borderlessOption_Clicked(bLessOpt, wBarOpt)
+        AddHandler wBarOpt.Click, Function() windowsBarOption_Clicked(bLessOpt, wBarOpt)
+
         Me.Controls.Add(resOpt)
+
+        buttonSwitching(bLessOpt, wBarOpt)
     End Sub
 
     'Options Menu - Resolution
@@ -64,6 +88,32 @@
                 Me.quitButton.Left = 1920 - 27 - quitButton.Width
         End Select
         Return 0
+    End Function
+
+    Private Function borderlessOption_Clicked(alt1, alt2)
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        Me.WindowState = FormWindowState.Maximized
+        buttonSwitching(alt2, alt1)
+        Return Nothing
+    End Function
+
+    Private Function windowsBarOption_Clicked(alt1, alt2)
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        Me.WindowState = FormWindowState.Normal
+        buttonSwitching(alt1, alt2)
+        Return Nothing
+    End Function
+
+    Private Function buttonSwitching(button1, button2)
+        Dim border As Boolean = True
+        If border = True Then
+            Me.Controls.Add(button1)
+            Me.Controls.Remove(button2)
+        ElseIf border = False Then
+            Me.Controls.Add(button2)
+            Me.Controls.Remove(button1)
+        End If
+        Return Nothing
     End Function
 
     'Play game
